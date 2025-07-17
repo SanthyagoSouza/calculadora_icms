@@ -98,6 +98,7 @@ function mostrarCst() {
     let botao = document.querySelector("#calcular-cst-00");
     if (cst === 'XX') {
         cstxx.style.display = "block";
+          cst10.style.display = "none";
         cst00.style.display = "none";
         cst20.style.display = "none";
         botao.style.display = "none";
