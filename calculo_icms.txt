@@ -1,0 +1,53 @@
+########################################################
+# FORMULÁRIO DE CÁLCULO DE ICMS POR CST - ICMS        #
+# Referência: Tabela B do SPED Fiscal (CST ICMS)      #
+# Projeto de Lógica de Programação - Cálculo de ICMS  #
+# Autor: [Seu Nome]                                   #
+# Data: [Data do Projeto]                             #
+########################################################
+
+# CST 00 - Tributação integral
+# Produto tributado com ICMS
+ICMS = (Valor_Produto + Valor_Frete + Valor_Seguro + Outras_Despesas) * (Aliquota_ICMS / 100)
+
+# CST 10 - Tributado com cobrança de ICMS por substituição tributária
+ICMS = (Base_ICMS * (Aliquota_ICMS / 100))
+ICMS_ST = (Base_ICMS_ST * (Aliquota_ICMS_ST / 100)) - ICMS
+
+# CST 20 - Com redução de base de cálculo
+Base_Reduzida = Base_ICMS * (1 - (Reducao_Base_ICMS / 100))
+ICMS = Base_Reduzida * (Aliquota_ICMS / 100)
+
+# CST 30 - Isenção ou não incidência com cobrança de ICMS por substituição tributária
+ICMS = 0
+ICMS_ST = Base_ICMS_ST * (Aliquota_ICMS_ST / 100)
+
+# CST 40 - Isenta
+ICMS = 0
+
+# CST 41 - Não tributada
+ICMS = 0
+
+# CST 50 - Suspensão
+ICMS = 0
+
+# CST 51 - Diferimento
+# ICMS devido futuramente (não recolhido na operação atual)
+ICMS_Diferido = Base_ICMS * (Aliquota_ICMS / 100)
+ICMS = 0  # No momento da emissão, não há destaque de ICMS
+
+# CST 60 - ICMS cobrado anteriormente por substituição tributária
+# Nenhum ICMS destacado. Informação apenas de ICMS retido anteriormente
+ICMS = 0
+ICMS_ST_Retido = Valor_ICMS_ST_Retido
+
+# CST 70 - Com redução e cobrança de ICMS ST
+Base_Reduzida = Base_ICMS * (1 - (Reducao_Base_ICMS / 100))
+ICMS = Base_Reduzida * (Aliquota_ICMS / 100)
+ICMS_ST = Base_ICMS_ST * (Aliquota_ICMS_ST / 100) - ICMS
+
+# CST 90 - Outros
+# Pode variar – aplicar regra similar ao CST 00 ou conforme especificado
+ICMS = (Base_ICMS * (Aliquota_ICMS / 100))
+# Se houver ST:
+ICMS_ST = (Base_ICMS_ST * (Aliquota_ICMS_ST / 100)) - ICMS

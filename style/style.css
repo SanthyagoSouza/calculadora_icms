@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#header {
+    text-align: center;
+    padding: 16px;
+    /* border: solid 1px black; */
+    margin: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+
+}
+
+#cst-00, #cst-20 {
+    /* border:solid 1px black; */
+    border-radius: 12px;
+    padding: 12px;
+    margin: 18px 8px 0;
+    background-color: #f0f0f0;
+    box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#cst-00 h3 {
+    margin: 0 0 8px;
+    text-align: center;
+}
+#cst-00 p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+section #cst00{
+    display: flex;
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#cst00 > input{
+    width: 42%;
+    padding: 1px;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+    font-size: 16px;
+    text-align: center;
+}
+#cst00 > p{
+    width: 42%;
+    padding: 1px;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+#calcular-cst-00{
+    margin-top: 12px;
+    width: 15%;
+    padding: 1px;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#cst_icms{
+    width: 33%;
+    padding: 1px;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 18px;
+}
