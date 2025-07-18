@@ -13,117 +13,38 @@
         <div id="header">
             <h1>Calculadora de ICMS</h1>
             <p>Ideia do projeto e realizar calculo do imposto ICMS com base no CST escolhido</p>
+            <section id="cst-00">
+                <label for="">Cst ICMS</label>
+                <select name="" id="cst_icms">
+                    <option value="xx">Selecione</option>
+                    <option value="00">CST 00 - Tributada Integralmente</option>
+                    <option value="10">CST 10 - Tributado com cobrança de ICMS por substituição tributária</option>
+                    <option value="20">CST 20 - Redução de Base</option>
+                    <option value="30">CST 30 - Isenção ou não incidência com cobrança de ICMS por substituição
+                        tributária
+                    </option>
+                    <option value="40">CST 40</option>
+                    <option value="41">CST 41</option>
+                    <option value="50">CST 50</option>
+                    <option value="51">CST 51</option>
+                    <option value="60">CST 60</option>
+                    <option value="70">CST 70</option>
+                    <option value="90">CST 90 - Outros </option>
+                </select>
         </div>
+
     </header>
-
-    <section id="cst-00">
-        <label for="">Cst ICMS</label>
-        <select name="" id="cst_icms" onchange="mostrarCst()">
-            <option value="XX">Selecione</option>
-            <option value="00">CST 00 - Tributada Integralmente</option>
-            <option value="10">CST 10 - Tributado com cobrança de ICMS por substituição tributária</option>
-            <option value="20">CST 20 - Redução de Base</option>
-            <option value="30">CST 30 - Isenção ou não incidência com cobrança de ICMS por substituição tributária</option>
-            <option value="40">CST 40</option>
-            <option value="41">CST 41</option>
-            <option value="50">CST 50</option>
-            <option value="51">CST 51</option>
-            <option value="60">CST 60</option>
-            <option value="70">CST 70</option>
-            <option value="90">CST 90 - Outros </option>
-        </select>
-
-        <div id="cst_xx" style="display: block;">
+    <section id="sessao">
+        <div id="cst_xx">
             <h3>Selecione um CST</h3>
             <p>Com base nos seus valores de base de calculo, aliquotas e beneficios fiscais essa calculadora irá
                 permitir você realizar diversos calculos afim de obter o valor do imposto de circulação sobre
                 mercadorias</p>
         </div>
-        <!--  Primeira Tela -->
- 
-        <div id="cst_00" style="display:none">
-            <h3>CST ICMS 00</h3>
-            <p>O CST 00 é utilizado para operações internas com alíquota de ICMS normal, ou seja, sem isenção ou redução
-                de
-                base de cálculo.</p>
-
-            <div id="cst00" s>
-                <label for="" id="baseCalculo">Base de Calculo</label>
-                <input type="number" id="base_calculo">
-                <label for="">Aliquota ICMS</label>
-                <input type="number" id="aliquota">
-                <label for="">Valor do ICMS</label>
-                <p id="valor_icms">0,00</p>
-            </div>
-        </div>
-        <!-- Cst 00 de icms -->
-         
-        <div id="cst_10" style="display:none">
-            <h3>CST ICMS 10</h3>
-            <p>O CST 10 é utilizado para operação de saida/entrada que contenham substituição tributaria</p>
-
-            <div id="cst00" s>
 
 
-                <label for="" id="baseCalculo">Base de Calculo</label>
-                <input type="number" id="base_calculo10">
-                <label for="">Aliquota ICMS</label>
-                <input type="number" id="aliquota10">
-                <label for="">Valor do ICMS</label>
-                <p id="valor_icms10">0,00</p>
 
-                <label for="" id="baseCalculo">Base de Calculo substituição ICMS</label>
-                <input type="number" id="base_calculo_sub10">
-                <label for="">Aliquota substituição ICMS</label>
-                <input type="number" id="aliquota_sub10">
-                <label for="">Valor substituição ICMS</label>
-                <p id="valor_sub_icms10">0,00</p>
-            </div>
-        </div>
-        <!-- Cst 10 de icms contem redução -->
-
-
-        <div id="cst_20" style="display: none;">
-            <h3>CST ICMS 20</h3>
-            <p>O CST 20 E utilizado para realizar calculos de ICMS quando existe redução de base de calculo.</p>
-
-            <div id="cst00">
-
-
-                <label for="" id="baseCalculo">Base de Calculo</label>
-                <input type="number" id="base_calculo20">
-                <label for="">Redução ICMS</label>
-                <input type="number" id="reducao20">
-                <label for="">Aliquota ICMS</label>
-                <input type="number" id="aliquota20">
-                <label for="">Valor do ICMS</label>
-                <p id="valor_icms20">0,00</p>
-            </div>
-        </div>
-        <div id="cst_30" style="display:none">
-            <h3>CST ICMS 10</h3>
-            <p>O CST 10 é utilizado para operação de saida/entrada que contenham substituição tributaria</p>
-
-            <div id="cst00" s>
-
-<!-- 
-                <label for="" id="baseCalculo">Base de Calculo</label>
-                <input type="number" id="base_calculo10">
-                <label for="">Aliquota ICMS</label>
-                <input type="number" id="aliquota10">
-                <label for="">Valor do ICMS</label>
-                <p id="valor_icms10">0,00</p> -->
-
-                <label for="" id="baseCalculo">Base de Calculo substituição ICMS</label>
-                <input type="number" id="base_calculo_sub10">
-                <label for="">Aliquota substituição ICMS</label>
-                <input type="number" id="aliquota_sub10">
-                <label for="">Valor substituição ICMS</label>
-                <p id="valor_sub_icms10">0,00</p>
-            </div>
-        </div>
-        <!-- Cst 10 de icms contem redução -->
-        <button id="calcular-cst-00" style="display: none;" onclick="calcularIcms()">Calcular</button>
+        <!-- <button id="calcular-cst-00" style="display: none;" onclick="calcularIcms()">Calcular</button> -->
     </section>
 
 </body>

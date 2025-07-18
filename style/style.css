@@ -17,13 +17,13 @@
 
 }
 
-#cst-00, #cst-20 {
-    /* border:solid 1px black; */
-    border-radius: 12px;
+#cst-00,
+#cst-20 {
+
     padding: 12px;
     margin: 33px 8px 0;
     background-color: #f0f0f0;
-    box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+
     text-align: center;
 }
 
@@ -31,13 +31,14 @@
     margin: 0 0 8px;
     text-align: center;
 }
+
 #cst-00 p {
     margin: 8px 0;
     font-size: 14px;
     color: #555;
 }
 
-section #cst00{
+section #cst00 {
     display: flex;
     /* flex-direction: row; */
     display: grid;
@@ -48,7 +49,7 @@ section #cst00{
     width: 100%;
 }
 
-#cst00 > input{
+#cst00>input {
     width: 42%;
     padding: 1px;
     border-radius: 8px;
@@ -56,7 +57,8 @@ section #cst00{
     font-size: 16px;
     text-align: center;
 }
-#cst00 > p{
+
+#cst00>p {
     width: 42%;
     padding: 1px;
     border-radius: 8px;
@@ -65,7 +67,8 @@ section #cst00{
     text-align: center;
     color: #333;
 }
-#calcular-cst-00{
+
+#calcular-cst-00 {
     margin-top: 12px;
     width: 15%;
     padding: 1px;
@@ -75,7 +78,7 @@ section #cst00{
     cursor: pointer;
 }
 
-#cst_icms{
+#cst_icms {
     width: 33%;
     padding: 1px;
     border-radius: 8px;
@@ -83,4 +86,16 @@ section #cst00{
     font-size: 16px;
     text-align: center;
     margin-bottom: 18px;
+}
+
+#sessao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    /* border: solid 1px #ccc; */
+    box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+    padding: 22px;
+    border-radius: 16px;
 }
