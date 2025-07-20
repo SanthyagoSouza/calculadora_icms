@@ -1,3 +1,9 @@
+<style>
+#valor_frete{
+    margin: 15px 0 0 0;
+}
+</style>
+
 <div id="cst_10">
     <h3>CST ICMS 10</h3>
     <p>O CST 10 é utilizado para operação de saida/entrada que contenham substituição tributaria</p>
@@ -6,12 +12,16 @@
 
 
         <label for="" id="baseCalculo">Base de Calculo</label>
-        <input type="number" id="base_calculo">
+        <input type="number" id="base_calculo_icms">
         <label for="">Aliquota ICMS</label>
-        <input type="number" id="aliquota">
+        <input type="number" id="aliquota_icms">
         <label for="">Valor do ICMS</label>
         <p id="valor_icms">0,00</p>
 
+
+     
+        <label id="valor_frete" for="">Valor do Frete</label>
+        <input type="number" name="" id="valor_frete">
         <label for="" id="baseCalculo">Base de Calculo substituição ICMS</label>
         <input type="number" id="base_calculo_sub">
         <label for="">Aliquota substituição ICMS</label>
@@ -20,5 +30,5 @@
         <p id="valor_sub_icms">0,00</p>
     </div>
 </div>
- <button id="calcular-cst-00"">Calcular</button>
+ <button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
 <!-- Cst 10 de icms contem redução -->
