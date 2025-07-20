@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <title>Calculadora de ICMS</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
     <header>
-        <div id="header">
+<nav id="menu">
+  <button id="icms" data-modulo="icms">ICMS</button>
+  <button id="ipi" data-modulo="ipi">IPI</button>
+  <button  id="pis_cofins" data-modulo="pis_cofins">PIS/COFINS</button>
+  <button id="difal" data-modulo="difal">DIFAL</button>
+</nav>
+<div id="corpo">
+    </header>
+            <div id="header">
             <h1>Calculadora de ICMS</h1>
             <p>Ideia do projeto e realizar calculo do imposto ICMS com base no CST escolhido</p>
             <section id="cst-00">
@@ -32,8 +43,6 @@
                     <option value="90">CST 90 - Outros </option>
                 </select>
         </div>
-
-    </header>
     <section id="sessao">
         <div id="cst_xx">
             <h3>Selecione um CST</h3>
@@ -45,13 +54,9 @@
         
         <!-- <button id="calcular-cst-00" style="display: none;" onclick="calcularIcms()">Calcular</button> -->
     </section>
-
+</div>
 </body>
-<script src="js/script.js">
-
-
-
-
-</script>
+<script src="js/script.js"></script>
+<script src="js/naevgacao.js"></script>
 
 </html>
