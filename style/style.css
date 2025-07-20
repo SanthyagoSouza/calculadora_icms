@@ -60,7 +60,7 @@ section #cst00 {
 
 #cst00 > #valor_icms,
 #valor_sub_icms, #valor_base_icms_sub
-,#valor_base_reduzida, #valor_diferimento_icms, #valor_icms_recoher {
+,#valor_base_reduzida, #valor_diferimento_icms, #valor_icms_recolher {
   width: 42%;
   padding: 1px;
   border-radius: 8px;

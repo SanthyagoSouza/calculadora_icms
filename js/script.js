@@ -83,6 +83,15 @@ function calcularIcms() {
     case "51":
       calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento)
       break;
+    case "70":
+     alert('teste')
+      break;
+
+    case "90":
+      calcularReducaoBaseIcms(baseIcms, aliquotaIcms, reducao);
+      calcularIcmsSubstituto(baseIcms, aliquotaIcmsSub, frete, mva);
+      calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento);
+      break;
     default:
       alert("Esse CST não existe ou não foi implementado ainda.");
       return;
@@ -128,3 +137,8 @@ function calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento) {
   let icmsRecolher = (valor_icms - icmsDiferido);
   document.getElementById("valor_icms_recolher").innerHTML = icmsRecolher.toFixed(2);
 }
+
+/* CST 70 - Com redução e cobrança de ICMS ST
+Base_Reduzida = Base_ICMS * (1 - (Reducao_Base_ICMS / 100))
+ICMS = Base_Reduzida * (Aliquota_ICMS / 100)
+ICMS_ST = Base_ICMS_ST * (Aliquota_ICMS_ST / 100) - ICMS*/

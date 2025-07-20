@@ -1,0 +1,58 @@
+<style>
+    #informacao {
+        margin: 10px 0 22px;
+        font-size: 14px;
+        width: 90%;
+    }
+</style>
+<h3>CST ICMS 90 - Outras operações</h3>
+<p id="informacao">
+  O CST 90 é utilizado para operações com ICMS que não se enquadram em nenhum dos demais códigos.  
+  Pode envolver ICMS próprio, substituição tributária, redução de base de cálculo, diferimento e outras particularidades conforme a operação.
+</p>
+
+<div id="cst00" >
+<label for="">Base de Cálculo do ICMS</label>
+<input type="number" id="base_calculo_icms" value="0.00" />
+
+<label for="">Redução da Base de Cálculo (%)</label>
+<input type="number" id="reducao" value="0.00" />
+
+<p>Base Reduzida:</p>
+<p id="valor_base_reduzida">0,00</p>
+
+<label for="">Alíquota do ICMS</label>
+<input type="number" id="aliquota_icms" value="0.00" />
+
+<p>Valor do ICMS:</p>
+<p id="valor_icms">0,00</p>
+
+
+
+<label for="">Valor do Frete</label>
+<input type="number" id="valor_frete" value="0.00" />
+
+<label for="">Valor do MVA (%)</label>
+<input type="number" id="valor_mva" value="0.00" />
+
+<label for="">Alíquota do ICMS Substituição</label>
+<input type="number" id="aliquota_sub" value="0.00" />
+
+<p>Base ICMS ST:</p>
+<p id="valor_base_icms_sub">0,00</p>
+
+<p>ICMS Substituição Tributária:</p>
+<p id="valor_sub_icms">0,00</p>
+
+
+
+<label for="">Percentual de Diferimento (%)</label>
+<input type="number" id="percentual_diferimento" value="0.00" />
+
+<p>ICMS Diferido:</p>
+<p id="valor_diferimento_icms">0,00</p>
+
+<p>ICMS a Recolher após Diferimento:</p>
+<p id="valor_icms_recolher">0,00</p>
+</div>
+<button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>

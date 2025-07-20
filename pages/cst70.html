@@ -1,0 +1,49 @@
+<style>
+  #valor_frete {
+    margin: 15px 0 0 0;
+  }
+  #cst_10 > h3,
+  p {
+    margin: 17px 0;
+  }
+  #informacao {
+    margin: 10px 0;
+    font-size: 14px;
+    width: 90%;
+  }
+</style>
+
+<h3>CST ICMS 70</h3>
+<p>
+  O CST 70 é utilizado em operações com ICMS quando há redução da base de cálculo 
+  e também ocorre substituição tributária (ICMS-ST).
+</p>
+<p>
+  Nesta situação, calcula-se primeiro o ICMS próprio com a base reduzida, e em seguida o ICMS-ST, 
+  incluindo valor do frete e MVA conforme a legislação vigente.
+</p>
+
+  <div id="cst00">
+    <label for="" id="baseCalculo">Base de Calculo</label>
+    <input type="number" id="base_calculo_icms" value="0.00" />
+    <label for="">Redução ICMS</label>
+    <input type="number" id="reducao" value="0.00" />
+    <label for="">Base Reduzida</label>
+    <p id="valor_base_reduzida">0,00</p>
+    <label for="">Aliquota ICMS</label>
+    <input type="number" id="aliquota_icms" value="0.00" />
+    <label for="">Valor do ICMS</label>
+    <p id="valor_icms">0,00</p>
+    <label id="valor_fret" for="">Valor do Frete</label>
+    <input type="number" name="" id="valor_frete" value="0.00" />
+    <label id="valor_mv" for="">Valor do Mva</label>
+    <input type="number" name="" id="valor_mva" value="0.00" />
+    <label for="">Aliquota substituição ICMS</label>
+    <input type="number" id="aliquota_sub" value="0.00" />
+    <label for="">Valor base ICMS Sub</label>
+    <p id="valor_base_icms_sub">0,00</p>
+    <label for="">Valor substituição ICMS</label>
+    <p id="valor_sub_icms">0,00</p>
+  </div>
+</div>
+<button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
