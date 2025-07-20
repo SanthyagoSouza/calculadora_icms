@@ -12,3 +12,13 @@ document.getElementById("cst_icms").addEventListener("input", async () => {
 
     document.querySelector("#sessao").innerHTML = content;
 })
+
+
+document.querySelectorAll("#menu button").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+        const rota = btn.dataset.modulo;
+        const res = await fetch(`pages/${rota}/${rota}.html`);
+        const content = await res.text(); // 👈 faltava isso
+        document.querySelector("#corpo").innerHTML = content;
+    });
+});
