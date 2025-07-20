@@ -1,18 +1,36 @@
-<div id="cst_20" >
-    <h3>CST ICMS 20</h3>
-    <p>O CST 20 E utilizado para realizar calculos de ICMS quando existe redução de base de calculo.</p>
+<style>
+  #valor_frete {
+    margin: 15px 0 0 0;
+  }
+  #cst_10 > h3,
+  p {
+    margin: 17px 0;
+  }
+  #informacao {
+    margin: 10px 0;
+    font-size: 14px;
+    width: 90%;
+  }
+</style>
 
-    <div id="cst00">
+<div id="cst_20">
+  <h3>CST ICMS 20</h3>
+  <p>
+    O CST 20 E utilizado para realizar calculos de ICMS quando existe redução de
+    base de calculo.
+  </p>
 
-
-        <label for="" id="baseCalculo">Base de Calculo</label>
-        <input type="number" id="base_calculo_icms">
-        <label for="">Redução ICMS</label>
-        <input type="number" id="reducao">
-        <label for="">Aliquota ICMS</label>
-        <input type="number" id="aliquota_icms">
-        <label for="">Valor do ICMS</label>
-        <p id="valor_icms">0,00</p>
-    </div>
+  <div id="cst00">
+    <label for="" id="baseCalculo">Base de Calculo</label>
+    <input type="number" id="base_calculo_icms" value="0.00" />
+    <label for="">Redução ICMS</label>
+    <input type="number" id="reducao" value="0.00" />
+    <label for="">Base Reduzida</label>
+    <p id="valor_base_reduzida">0,00</p>
+    <label for="">Aliquota ICMS</label>
+    <input type="number" id="aliquota_icms" value="0.00" />
+    <label for="">Valor do ICMS</label>
+    <p id="valor_icms">0,00</p>
+  </div>
 </div>
- <button id="calcular-cst-00"  onclick="calcularIcms()">Calcular</button>
+<button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
