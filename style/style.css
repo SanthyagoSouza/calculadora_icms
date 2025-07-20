@@ -98,3 +98,16 @@ section #cst00 {
   padding: 22px;
   border-radius: 16px;
 }
+
+ #valor_frete {
+    margin: 15px 0 0 0;
+  }
+  #cst_10 > h3,
+  p {
+    margin: 17px 0;
+  }
+  #informacao {
+    margin: 10px 0;
+    font-size: 14px;
+    width: 90%;
+  }
