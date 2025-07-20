@@ -24,8 +24,6 @@ function calcularIcms() {
   const baseIcmsEl = document.getElementById("base_calculo_icms");
   const aliquotaIcmsEl = document.getElementById("aliquota_icms");
 
-
-
   let aliquotaSubIcmsEl = document.querySelector('#aliquota_sub');
   let freteEl = document.querySelector('#valor_frete');
   let mvaEl = document.querySelector('#valor_mva');
@@ -139,7 +137,3 @@ function calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento) {
   document.getElementById("valor_icms_recolher").innerHTML = icmsRecolher.toFixed(2);
 }
 
-/* CST 70 - Com redução e cobrança de ICMS ST
-Base_Reduzida = Base_ICMS * (1 - (Reducao_Base_ICMS / 100))
-ICMS = Base_Reduzida * (Aliquota_ICMS / 100)
-ICMS_ST = Base_ICMS_ST * (Aliquota_ICMS_ST / 100) - ICMS*/
