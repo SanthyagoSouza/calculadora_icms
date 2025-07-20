@@ -84,7 +84,8 @@ function calcularIcms() {
       calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento)
       break;
     case "70":
-     alert('teste')
+      calcularReducaoBaseIcms(baseIcms, aliquotaIcms, reducao)
+      calcularIcmsSubstituto(baseIcms, aliquotaIcmsSub, frete, mva)
       break;
 
     case "90":
