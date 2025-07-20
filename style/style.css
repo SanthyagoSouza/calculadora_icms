@@ -41,10 +41,11 @@ section #cst00 {
   /* flex-direction: row; */
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  gap: 3px;
+  gap: 1px;
   align-items: center;
   justify-content: center;
   width: 100%;
+
 }
 
 #cst00 > input {
@@ -54,10 +55,12 @@ section #cst00 {
   border: solid 1px #ccc;
   font-size: 16px;
   text-align: center;
+
 }
 
 #cst00 > #valor_icms,
-#valor_sub_icms, #valor_base_icms_sub,#valor_base_reduzida {
+#valor_sub_icms, #valor_base_icms_sub
+,#valor_base_reduzida, #valor_diferimento_icms, #valor_icms_recoher {
   width: 42%;
   padding: 1px;
   border-radius: 8px;
@@ -104,7 +107,7 @@ section #cst00 {
   }
   #cst_10 > h3,
   p {
-    margin: 17px 0;
+    margin:3px 0;
   }
   #informacao {
     margin: 10px 0;

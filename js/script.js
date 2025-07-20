@@ -10,7 +10,7 @@ document.getElementById("cst_icms").addEventListener("input", async () => {
   let res = await fetch(`./pages/cst${rota}.html`);
 
   let content = await res.text();
-  // console.log(content);
+
   document.querySelector("#sessao").innerHTML = content;
 })
 
@@ -30,11 +30,13 @@ function calcularIcms() {
   let freteEl = document.querySelector('#valor_frete');
   let mvaEl = document.querySelector('#valor_mva');
   let reducaoIcmsEl = document.querySelector('#reducao');
+  let diferimentoEl = document.querySelector('#percentual_diferimento');
   let aliquotaIcmsSub = 0;
   let frete = 0;
   let mva = 0;
   let baseIcms = 0;
   let aliquotaIcms = 0;
+  let diferimento = 0;
 
 
   if (baseIcmsEl) {
@@ -56,6 +58,9 @@ function calcularIcms() {
   if (reducaoIcmsEl) {
     reducao = parseFloat(reducaoIcmsEl.value || 0);
   }
+  if (diferimentoEl) {
+    diferimento = parseFloat(diferimentoEl.value || 0);
+  }
 
   switch (cst) {
     case "00":
@@ -75,7 +80,9 @@ function calcularIcms() {
       calcularIcmsSubstituto(baseIcms, aliquotaIcmsSub, frete, mva)
 
       break;
-
+    case "51":
+      calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento)
+      break;
     default:
       alert("Esse CST não existe ou não foi implementado ainda.");
       return;
@@ -83,9 +90,9 @@ function calcularIcms() {
 }
 
 function calcularIcmsProprio(baseIcms, aliquotaIcms) {
-  valor_icms = (baseIcms * (aliquotaIcms / 100)).toFixed(2);
+  let valor_icms = (baseIcms * (aliquotaIcms / 100));
 
-  document.getElementById("valor_icms").innerHTML = valor_icms;
+  document.getElementById("valor_icms").innerHTML = valor_icms.toFixed(2);
   return valor_icms;
 }
 
@@ -94,21 +101,30 @@ function calcularIcmsSubstituto(baseIcms, aliquotaIcmsSub, frete, mva) {
   let baseIcmsSub = (baseIcms + frete) * (1 + (mva / 100));
   console.log(baseIcmsSub);
   document.getElementById("valor_base_icms_sub").innerHTML = baseIcmsSub.toFixed(2);
-  let valorIcmsSub = (baseIcmsSub * (aliquotaIcmsSub / 100)).toFixed(2);
-  console.log(valorIcmsSub);
-  document.getElementById("valor_sub_icms").innerHTML = valorIcmsSub;
-  return valorIcmsSub, baseIcmsSub;
+  let valorIcmsSub = (baseIcmsSub * (aliquotaIcmsSub / 100));
+
+  document.getElementById("valor_sub_icms").innerHTML = valorIcmsSub.toFixed(2);
+  return { valorIcmsSub, baseIcmsSub };
 }
 
 function calcularReducaoBaseIcms(baseIcms, aliquotaIcms, reducao) {
-  const baseReduzida = (baseIcms * (1 - (reducao / 100))).toFixed(2);
-  valor_icms = (baseReduzida * (aliquotaIcms / 100)).toFixed(2);
+  const baseReduzida = (baseIcms * (1 - (reducao / 100)));
+  let valor_icms = (baseReduzida * (aliquotaIcms / 100));
   console.log("Base Reduzida:", baseReduzida);
   console.log("ICMS com redução:", valor_icms);
 
-  document.getElementById("valor_base_reduzida").innerHTML = baseReduzida;
-  document.getElementById("valor_icms").innerHTML = valor_icms;
-  console.log(valor_icms);
+  document.getElementById("valor_base_reduzida").innerHTML = baseReduzida.toFixed(2);
+  document.getElementById("valor_icms").innerHTML = valor_icms.toFixed(2);
+
 
   return valor_icms;
+}
+
+function calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento) {
+  let valor_icms = (baseIcms * (aliquotaIcms / 100));
+  document.getElementById("valor_icms").innerHTML = valor_icms.toFixed(2);
+  let icmsDiferido = (valor_icms * (diferimento / 100));
+  document.getElementById("valor_diferimento_icms").innerHTML = icmsDiferido.toFixed(2);
+  let icmsRecolher = (valor_icms - icmsDiferido);
+  document.getElementById("valor_icms_recolher").innerHTML = icmsRecolher.toFixed(2);
 }
