@@ -1,20 +1,28 @@
 <style>
-
+  #cst_00 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
 </style>
 <div id="cst_00">
-    <h3>CST ICMS 00</h3>
-    <p>O CST 00 é utilizado para operações internas com alíquota de ICMS normal, ou seja, sem isenção ou redução
-        de
-        base de cálculo.</p>
-
-    <div id="cst00" s>
-        <label for="" id="baseCalculo">Base de Calculo</label>
-        <input type="number" id="base_calculo_icms" value="0.00">
-        <label for="">Aliquota ICMS</label>
-        <input type="number" id="aliquota_icms" value="0.00">
-        <label for="">Valor do ICMS</label>
-        <p id="valor_icms" value="0.00">0,00</p>
-    </div>
+  <h3>CST ICMS 00</h3>
+  <p>
+    O CST 00 é utilizado para operações internas com alíquota de ICMS normal, ou
+    seja, sem isenção ou redução de base de cálculo.
+  </p>
 </div>
- <button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
+<div id="cst00" s>
+  <label for="" id="baseCalculo">Base de Calculo</label>
+  <input type="number" id="base_calculo_icms" value="0.00" />
+  <label for="">Aliquota ICMS</label>
+  <input type="number" id="aliquota_icms" value="0.00" />
+  <label for="">Valor do ICMS</label>
+  <p id="valor_icms" value="0.00">0,00</p>
+</div>
+
+<button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
 <!-- Cst 00 de icms -->

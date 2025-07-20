@@ -1,10 +1,23 @@
-<div id="cst_30" >
-        <h3>CST ICMS 10</h3>
-        <p>O CST 10 é utilizado para operação de saida/entrada que contenham substituição tributaria</p>
+<style>
 
-        <div id="cst00" s>
-
-   <label id="valor_fret" for="">Valor do Frete</label>
+  #cst_30 {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      text-align: center;
+  }
+</style>
+<div id="cst_30">
+  <h3>CST ICMS 10</h3>
+  <p>
+    O CST 10 é utilizado para operação de saida/entrada que contenham
+    substituição tributaria
+  </p>
+</div>
+  <div id="cst00" s>
+    <label id="valor_fret" for="">Valor do Frete</label>
     <input type="number" name="" id="valor_frete" value="0.00" />
     <label id="valor_mv" for="">Valor do Mva</label>
     <input type="number" name="" id="valor_mva" value="0.00" />
@@ -14,6 +27,6 @@
     <p id="valor_base_icms_sub">0,00</p>
     <label for="">Valor substituição ICMS</label>
     <p id="valor_sub_icms">0,00</p>
-        </div>
-    </div>
-     <button id="calcular-cst-00"  onclick="calcularIcms()">Calcular</button>
+  </div>
+
+<button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
