@@ -1,24 +1,28 @@
-<style>
-  #cst_00 {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
+<!DOCTYPE html>
+<html lang="pt-br">
 
-   #cst00 {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;
-   }
-</style>
-<section id="cst-00">
-                <label for="">Cst ICMS</label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Calculadora de IPI</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+<div id="corpo">
+    </header>
+          
+        </div>
+          <div id="header">
+            <h1>Calculadora de IPI</h1>
+            <p>Ideia do projeto e realizar calculo do imposto ICMS com base no CST escolhido</p>
+            <section id="cst-00">
+                <label for="">Cst IPI</label>
                 <select name="" id="cst_icms">
                     <option value="xx">Selecione</option>
                     <option value="00">CST 00 - Tributada Integralmente</option>
@@ -35,21 +39,18 @@
                     <option value="70">CST 70 - Com redução e cobrança de ICMS ST</option>
                     <option value="90">CST 90 - Outros </option>
                 </select>
-<div id="cst_00">
-  <h3>CST ICMS 00</h3>
-  <p>
-    O CST 00 é utilizado para operações internas com alíquota de ICMS normal, ou
-    seja, sem isenção ou redução de base de cálculo.
-  </p>
-</div>
-<div id="cst00" s>
-  <label for="" id="baseCalculo">Base de Calculo</label>
-  <input type="number" id="base_calculo_icms" value="0.00" />
-  <label for="">Aliquota ICMS</label>
-  <input type="number" id="aliquota_icms" value="0.00" />
-  <label for="">Valor do ICMS</label>
-  <p id="valor_icms" value="0.00">0,00</p>
-</div>
+    <section id="sessao">
+        <div id="cst_xx">
+            <h3>Selecione um CST</h3>
+            <p>Com base nos seus valores iremos calculo o IPI - Impostos sobre Produto Industrializado</p>
+        </div>
 
-<button id="calcular-cst-00" onclick="calcularIcms()">Calcular</button>
-<!-- Cst 00 de icms -->
+        
+        <!-- <button id="calcular-cst-00" style="display: none;" onclick="calcularIcms()">Calcular</button> -->
+    </section>
+</div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/naevgacao.js"></script>
+
+</html>
