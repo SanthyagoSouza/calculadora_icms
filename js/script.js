@@ -4,9 +4,9 @@ document.getElementById("cst_icms").addEventListener("input", async () => {
 
 
   let rota = await document.querySelector("#cst_icms").value;
-  // console.log(cst_icms);
+  console.log(cst_icms);
 
-  if (!rota) rota = "xx";
+  // if (!rota) rota = "XX";
 
 
   let res = await fetch(`./pages/icms/cst${rota}.html`);
@@ -116,6 +116,7 @@ function calcularIcmsSubstituto(baseIcms, aliquotaIcmsSub, frete, mva) {
   return { valorIcmsSub, baseIcmsSub };
 }
 
+
 function calcularReducaoBaseIcms(baseIcms, aliquotaIcms, reducao) {
   const baseReduzida = (baseIcms * (1 - (reducao / 100)));
   let valor_icms = (baseReduzida * (aliquotaIcms / 100));
@@ -137,4 +138,3 @@ function calcularDiferimentoIcms(baseIcms, aliquotaIcms, diferimento) {
   let icmsRecolher = (valor_icms - icmsDiferido);
   document.getElementById("valor_icms_recolher").innerHTML = icmsRecolher.toFixed(2);
 }
-
