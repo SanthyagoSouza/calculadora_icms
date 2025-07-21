@@ -1,4 +1,5 @@
 
+import Loading from './script.js';
 
 
 document.querySelectorAll("#menu button").forEach((btn) => {
@@ -11,7 +12,10 @@ document.querySelectorAll("#menu button").forEach((btn) => {
 
         const content = await res.text(); // 👈 faltava isso
 
-        document.querySelector("#corpo").innerHTML = content;
+        document.querySelector("#corpo").innerHTML = "";
+        document.querySelector("#sessao").innerHTML = "";
+        document.querySelector("#corpo").innerHTML += content;
+        setTimeout(() => Loading(), 1000);
     });
 });
 
