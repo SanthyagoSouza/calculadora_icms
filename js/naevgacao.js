@@ -10,7 +10,8 @@ document.querySelectorAll("#menu button").forEach((btn) => {
         const res = await fetch(`pages/${rota}/cstXX.html`);
 
         const content = await res.text(); // 👈 faltava isso
-
+      
+        document.querySelector("#corpo").innerHTML = "";
         document.querySelector("#corpo").innerHTML += content;
         Loading();
     });
