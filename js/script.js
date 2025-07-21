@@ -123,7 +123,7 @@ function calcularICMS(rota){
     let valorIcmsSub = (baseIcmsSub * (aliquotaIcmsSub / 100));
 
     document.getElementById("valor_sub_icms").innerHTML = valorIcmsSub.toFixed(2);
-    return { valorIcmsSub, baseIcmsSub };
+
   }
 
 
