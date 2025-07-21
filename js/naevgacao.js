@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import Loading from './script.js';
+=======
+import Loading from "./script.js";
+>>>>>>> 1a184466209865aa05ab95af970743324c34f103
 
 
 document.querySelectorAll("#menu button").forEach((btn) => {

@@ -1,3 +1,14 @@
+
+:root {
+  --color-bg: #f0f0f0;
+  --color-hover: #e0e0e0;
+  --color-box-shadow: rgba(218, 182, 182, 0.3);
+  --color-border: #ccc;
+  --color-text-primary: #000000;
+  --color-text-secondary: #555;
+  --color-highlight-bg: rgb(185, 176, 176);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +19,9 @@
 #header {
   text-align: center;
   padding: 16px;
-  /* border: solid 1px black; */
   margin: 8px;
-  background-color: #f0f0f0;
-  box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-bg);
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
   border-radius: 12px;
 }
 
@@ -19,60 +29,56 @@
 #cst-20 {
   padding: 12px;
   margin: 33px 8px 0;
-  background-color: #f0f0f0;
-
+  background-color: var(--color-bg);
   text-align: center;
 }
 
 #cst-00 h3 {
-  /* margin: 0 0 8px; */
   text-align: center;
 }
 
 #cst-00 #valor_icms,
 #valor_sub_icms {
-  /* margin: 1px 0; */
   font-size: 14px;
-  color: #555;
+  color: var(--color-text-secondary);
 }
 
 section #cst00 {
-  display: flex;
-  /* flex-direction: row; */
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 4px;
   align-items: center;
   justify-content: center;
   width: 100%;
-
 }
 
 #cst00 > input {
   width: 42%;
   padding: 1px;
+  margin: 2px 1px;
   border-radius: 8px;
-  margin: 2 1px;
-  border: solid 1px #ccc;
+  border: 1px solid var(--color-border);
   font-size: 16px;
   text-align: center;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
-
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
 }
 
 #cst00 > #valor_icms,
-#valor_sub_icms, #valor_base_icms_sub
-,#valor_base_reduzida, #valor_diferimento_icms, #valor_icms_recolher {
+#valor_sub_icms,
+#valor_base_icms_sub,
+#valor_base_reduzida,
+#valor_diferimento_icms,
+#valor_icms_recolher {
   width: 42%;
   padding: 1px;
+  margin: 2px 1px;
   border-radius: 8px;
-  border: solid 1px #ccc;
+  border: 1px solid var(--color-border);
   font-size: 16px;
   text-align: center;
-  color: #333;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);4
-  background-color: #af7b7bff;
-  margin: 2px 1px;
+  color: var(--color-text-primary);
+  background-color: var(--color-highlight-bg);
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
 }
 
 #calcular-cst-00 {
@@ -80,19 +86,19 @@ section #cst00 {
   width: 15%;
   padding: 1px;
   border-radius: 8px;
-  border: solid 1px #ccc;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border);
+  box-shadow: 1px 1px 5px var(--color-box-shadow);
   cursor: pointer;
 }
 
 #cst_icms {
   width: 33%;
   padding: 1px;
+  margin-bottom: 18px;
   border-radius: 8px;
-  border: solid 1px #ccc;
+  border: 1px solid var(--color-border);
   font-size: 16px;
   text-align: center;
-  margin-bottom: 18px;
 }
 
 #sessao {
@@ -101,49 +107,57 @@ section #cst00 {
   align-items: center;
   justify-content: center;
   width: 99%;
-
-  box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
   padding: 22px;
   border-radius: 16px;
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
 }
 
- #valor_frete {
-    /* margin: 15px 0 0 0; */
-  }
-  #cst_10 > h3,
-  p {
-    margin:3px 0;
-  }
-  #informacao {
-    margin: 10px 0;
-    font-size: 14px;
-    width: 90%;
-  }
+#valor_frete {
+  /* Placeholder */
+}
 
-          #icms, #ipi, #pis_cofins, #difal {
-            margin: 10px;
-            padding: 10px;
-            width:100%;
-            height: 100%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            text-align: center;
-            box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
-        } 
-        #icms:hover, #ipi:hover, #pis_cofins:hover, #difal:hover {
-            background-color: #e0e0e0;
-            cursor: pointer;
-        }
-        #menu {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            /* border: 1px solid #ccc; */
-            border-radius: 12px;
-            margin: 12px;
-            padding: 10px;
-            width: 98%;
-            background-color: #f0f0f0;
-            box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.3);
-        }
+#cst_10 > h3,
+#cst_10 > p {
+  margin: 3px 0;
+}
+
+#informacao {
+  margin: 10px 0;
+  font-size: 14px;
+  width: 90%;
+}
+
+#icms,
+#ipi,
+#pis_cofins,
+#difal {
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
+}
+
+#icms:hover,
+#ipi:hover,
+#pis_cofins:hover,
+#difal:hover {
+  background-color: var(--color-hover);
+  cursor: pointer;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 98%;
+  border-radius: 12px;
+  background-color: var(--color-bg);
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
+}
