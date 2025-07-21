@@ -8,7 +8,7 @@ document.querySelectorAll("#menu button").forEach((btn) => {
         const rota = btn.dataset.modulo;
 
 
-        const res = await fetch(`pages/${rota}/cstXX.html`);
+        const res = await fetch(`pages/${rota}/cstxx.html`);
 
         const content = await res.text(); // 👈 faltava isso
 
