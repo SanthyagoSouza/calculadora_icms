@@ -1,50 +1,73 @@
-<style>
+<section id="cst-10">
+  <div id="cst_10">
+    <h3>CST ICMS 10 - Tributada com Substituição Tributária</h3>
+    <p>
+      O CST 10 é utilizado para operações de saída/entrada que contenham
+      substituição tributária. Neste regime, o ICMS é recolhido antecipadamente
+      por um substituto tributário.
+    </p>
+    
+    <h4>Características principais:</h4>
+    <ul>
+      <li><strong>Dupla tributação:</strong> ICMS próprio + ICMS ST</li>
+      <li><strong>Substituto tributário:</strong> Recolhe o imposto por toda a cadeia</li>
+      <li><strong>MVA:</strong> Margem de Valor Agregado para calcular a base ST</li>
+      <li><strong>Antecipação:</strong> Imposto pago antes da venda ao consumidor final</li>
+    </ul>
+    
+    <h4>Fórmulas de Cálculo:</h4>
+    <div style="background: #007bff; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0;">
+      <strong>1º) Valor ICMS = Base de Cálculo × (Alíquota ICMS ÷ 100)</strong>
+    </div>
+    <div style="background: #28a745; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0;">
+      <strong>2º) Base ICMS ST = (Base de Cálculo + Frete) × (1 + MVA ÷ 100)</strong>
+    </div>
+    <div style="background: #dc3545; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0;">
+      <strong>3º) ICMS ST = (Base ICMS ST × Alíquota ST ÷ 100) - Valor ICMS</strong>
+    </div>
+    
+    <h5>Exemplo prático:</h5>
+    <p>• Base de Cálculo: R$ 1.000,00 | Alíquota ICMS: 18%</p>
+    <p>• ICMS Próprio: R$ 1.000,00 × 18% = <strong>R$ 180,00</strong></p>
+    <p>• Frete: R$ 50,00 | MVA: 40%</p>
+    <p>• Base ICMS ST: (R$ 1.000,00 + R$ 50,00) × 1,40 = <strong>R$ 1.470,00</strong></p>
+    <p>• Alíquota ST: 18%</p>
+    <p>• ICMS ST: (R$ 1.470,00 × 18%) - R$ 180,00 = <strong>R$ 84,60</strong></p>
+    
+    <div id="informacao">
+      <strong>Dica:</strong> Para calcular o ICMS ST preencha o valor do Frete e o MVA do produto. 
+      O MVA de 40% é comum, mas use o MVA específico do seu produto conforme a legislação.
+    </div>
+  </div>
 
-    #cst_10 {
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-      text-align: center;
-  }
-</style>
+  <div id="cst00">
+    <label for="" id="baseCalculo">Base de Calculo</label>
+    <input type="number" id="base_calculo_icms" value="0.00" />
+    <label for="">Aliquota ICMS</label>
+    <input type="number" id="aliquota_icms" value="0.00" />
+    <label for="">Valor do ICMS</label>
+    <p id="valor_icms">0,00</p>
 
-<div id="cst_10">
-  <h3>CST ICMS 10</h3>
-  <p>
-    O CST 10 é utilizado para operação de saida/entrada que contenham
-    substituição tributaria
-  </p>
-  <p id="informacao">
-    Para calcular o ICMS ST basta preencher o valor do Frete, e o valor do MVA
-    do produto No nosso exemplo podemos usar o valor do MVA de 40% que é o mais
-    comum, mas você pode usar o MVA do produto que você esta calculando
-  </p>
-  <p id="informacao">
-    No campo Base ICMS Sub ele vai pegar o valor da Base de calculo do ICMS e
-    aplicar o MVA e o valor do Frete para calcular o valor do ICMS Sub
-  </p>
-</div>
-<div id="cst00" s>
-  <label for="" id="baseCalculo">Base de Calculo</label>
-  <input type="number" id="base_calculo_icms" value="0.00" />
-  <label for="">Aliquota ICMS</label>
-  <input type="number" id="aliquota_icms" value="0.00" />
-  <label for="">Valor do ICMS</label>
-  <p id="valor_icms">0,00</p>
+    <label id="valor_fret" for="">Valor do Frete</label>
+    <input type="number" name="" id="valor_frete" value="0.00" />
+    <label id="valor_mv" for="">Valor do Mva</label>
+    <input type="number" name="" id="valor_mva" value="0.00" />
+    <label for="">Aliquota substituição ICMS</label>
+    <input type="number" id="aliquota_sub" value="0.00" />
+    <label for="">Valor base ICMS Sub</label>
+    <p id="valor_base_icms_sub">0,00</p>
+    <label for="">Valor substituição ICMS</label>
+    <p id="valor_sub_icms">0,00</p>
+  </div>
 
-  <label id="valor_fret" for="">Valor do Frete</label>
-  <input type="number" name="" id="valor_frete" value="0.00" />
-  <label id="valor_mv" for="">Valor do Mva</label>
-  <input type="number" name="" id="valor_mva" value="0.00" />
-  <label for="">Aliquota substituição ICMS</label>
-  <input type="number" id="aliquota_sub" value="0.00" />
-  <label for="">Valor base ICMS Sub</label>
-  <p id="valor_base_icms_sub">0,00</p>
-  <label for="">Valor substituição ICMS</label>
-  <p id="valor_sub_icms">0,00</p>
-</div>
+  <button id="calcular">Calcular</button>
 
-<button id="calcular">Calcular</button>
-
+  <h4>Observações importantes:</h4>
+  <ul>
+    <li>A substituição tributária é definida por lei e varia por segmento</li>
+    <li>O MVA (Margem de Valor Agregado) é específico para cada produto</li>
+    <li>O substituto tributário fica responsável pelo recolhimento antecipado</li>
+    <li>Frete e outros custos compõem a base de cálculo do ICMS ST</li>
+    <li>O ICMS próprio deve ser deduzido do valor do ICMS ST</li>
+  </ul>
+</section>

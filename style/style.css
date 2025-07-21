@@ -1,4 +1,3 @@
-
 :root {
   --color-bg: #f0f0f0;
   --color-hover: #e0e0e0;
@@ -7,6 +6,11 @@
   --color-text-primary: #000000;
   --color-text-secondary: #555;
   --color-highlight-bg: rgb(185, 176, 176);
+  --color-blue: #007bff;
+  --color-blue-hover: #0056b3;
+  --color-green: #28a745;
+  --color-warning: #fff3cd;
+  --color-warning-border: #ffeaa7;
 }
 
 * {
@@ -25,7 +29,153 @@
   border-radius: 12px;
 }
 
-#cst-00,
+#cst-00 {
+  padding: 12px;
+  margin: 33px 8px 0;
+  background-color: var(--color-bg);
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
+}
+
+#cst_00 {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+#cst_00 h3 {
+  text-align: center;
+  color: var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#cst_00 h4 {
+  color: #495057;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#cst_00 h5 {
+  color: #495057;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#cst_00 ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+#cst_00 ul li {
+  margin-bottom: 5px;
+}
+
+/* Estilo para a caixa da fórmula */
+#cst_00 div[style*="background: #007bff"] {
+  background: var(--color-blue) !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  margin: 15px 0 !important;
+  font-size: 16px !important;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+#cst00 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 10px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#cst00 > input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
+}
+
+#cst00 > input:focus {
+  border-color: var(--color-blue);
+  outline: none;
+}
+
+#cst00 > label {
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-bottom: 5px;
+}
+
+#cst00 > #valor_icms {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid var(--color-green);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-green);
+  background-color: #f8f9fa;
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
+}
+
+#calcular {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-blue);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+#calcular:hover {
+  background-color: var(--color-blue-hover);
+  transform: translateY(-1px);
+}
+
+/* Observações importantes */
+#cst_00 > h4:last-of-type {
+  color: #856404;
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#cst_00 > ul:last-of-type {
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 0;
+}
+
+/* Mantendo estilos originais para outros elementos */
 #cst-20 {
   padding: 12px;
   margin: 33px 8px 0;
@@ -33,37 +183,6 @@
   text-align: center;
 }
 
-#cst-00 h3 {
-  text-align: center;
-}
-
-#cst-00 #valor_icms,
-#valor_sub_icms {
-  font-size: 14px;
-  color: var(--color-text-secondary);
-}
-
-section #cst00 {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 4px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-#cst00 > input {
-  width: 42%;
-  padding: 1px;
-  margin: 2px 1px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  font-size: 16px;
-  text-align: center;
-  box-shadow: 1px 3px 3px var(--color-box-shadow);
-}
-
-#cst00 > #valor_icms,
 #valor_sub_icms,
 #valor_base_icms_sub,
 #valor_base_reduzida,
@@ -112,10 +231,6 @@ section #cst00 {
   box-shadow: 3px 7px 15px var(--color-box-shadow);
 }
 
-#valor_frete {
-  /* Placeholder */
-}
-
 #cst_10 > h3,
 #cst_10 > p {
   margin: 3px 0;
@@ -160,4 +275,268 @@ section #cst00 {
   border-radius: 12px;
   background-color: var(--color-bg);
   box-shadow: 3px 7px 15px var(--color-box-shadow);
+}
+
+#cst-20 {
+  padding: 12px;
+  margin: 33px 8px 0;
+  background-color: var(--color-bg);
+  text-align: left; /* Mudou de center para left */
+  border-radius: 12px;
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
+}
+
+/* Adicionar estilo para #cst_20 similar ao #cst_00: */
+#cst_20 {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left; /* Mudou de center para left */
+}
+
+#cst_20 h3 {
+  text-align: center;
+  color: var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#cst_20 h4 {
+  color: #495057;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#cst_20 h5 {
+  color: #495057;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#cst_20 ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+#cst_20 ul li {
+  margin-bottom: 5px;
+}
+
+/* Estilo para as duas caixas de fórmula do CST 20 */
+#cst_20 div[style*="background: #007bff"] {
+  background: var(--color-blue) !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+#cst_20 div[style*="background: #28a745"] {
+  background: var(--color-green) !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+/* Estilo específico para o campo Base Reduzida */
+#cst00 > #valor_base_reduzida {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid #17a2b8; /* Cor azul-ciano para diferenciar */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #17a2b8;
+  background-color: #f8f9fa;
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
+}
+
+/* Observações importantes para CST 20 */
+#cst_20 > h4:last-of-type {
+  color: #856404;
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#cst_20 > ul:last-of-type {
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 0;
+}
+
+/* MUDANÇAS ESPECÍFICAS PARA CST 10 */
+
+/* Adicionar novo estilo para #cst-10: */
+#cst-10 {
+  padding: 12px;
+  margin: 33px 8px 0;
+  background-color: var(--color-bg);
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 3px 7px 15px var(--color-box-shadow);
+}
+
+/* Substituir o estilo original #cst_10 por este: */
+#cst_10 {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left; /* Mudou de center para left */
+}
+
+#cst_10 h3 {
+  text-align: center;
+  color: var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#cst_10 h4 {
+  color: #495057;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#cst_10 h5 {
+  color: #495057;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#cst_10 ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+#cst_10 ul li {
+  margin-bottom: 5px;
+}
+
+/* Estilo para as três caixas de fórmula do CST 10 */
+#cst_10 div[style*="background: #007bff"] {
+  background: var(--color-blue) !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+#cst_10 div[style*="background: #28a745"] {
+  background: var(--color-green) !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+#cst_10 div[style*="background: #dc3545"] {
+  background: #dc3545 !important;
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  margin: 10px 0 !important;
+  font-size: 16px !important;
+  box-shadow: 2px 4px 8px var(--color-box-shadow);
+}
+
+/* Atualizar o estilo do #informacao para ficar mais destacado */
+#informacao {
+  margin: 15px 0;
+  font-size: 14px;
+  width: 100%; /* Mudou de 90% para 100% */
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  border-radius: 6px;
+  padding: 12px;
+  color: #0c5460;
+}
+
+/* Estilo específico para o campo Base ICMS Sub */
+#cst00 > #valor_base_icms_sub {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid #ffc107; /* Cor amarela para diferenciar */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #856404;
+  background-color: #fff3cd;
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
+}
+
+/* Estilo específico para o campo ICMS ST */
+#cst00 > #valor_sub_icms {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid #dc3545; /* Cor vermelha para destacar */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #dc3545;
+  background-color: #f8f9fa;
+  box-shadow: 1px 3px 3px var(--color-box-shadow);
+}
+
+/* Observações importantes para CST 10 */
+#cst_10 > h4:last-of-type {
+  color: #856404;
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+#cst_10 > ul:last-of-type {
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning-border);
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 0;
+}
+
+/* Ajuste para grid com mais campos no CST 10 - se necessário */
+#cst-10 #cst00 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 10px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }

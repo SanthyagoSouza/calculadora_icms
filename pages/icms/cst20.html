@@ -1,44 +1,55 @@
-<style>
-  #valor_frete {
-    margin: 15px 0 0 0;
-  }
-  #cst_10 > h3,
-  p {
-    margin: 17px 0;
-  }
-  #informacao {
-    margin: 10px 0;
-    font-size: 14px;
-    width: 90%;
-  }
-    #cst_20 {
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-      text-align: center;
-  }
-</style>
+<section id="cst-20">
+  <div id="cst_20">
+    <h3>CST ICMS 20 - Com Redução de Base de Cálculo</h3>
+    <p>
+      O CST 20 é utilizado para realizar cálculos de ICMS quando existe redução de
+      base de cálculo. Este benefício fiscal reduz o valor sobre o qual incide o imposto.
+    </p>
+    
+    <h4>Características principais:</h4>
+    <ul>
+      <li><strong>Redução da base:</strong> Benefício fiscal que diminui a base de cálculo</li>
+      <li><strong>Percentual de redução:</strong> Definido por lei estadual</li>
+      <li><strong>Aplicação:</strong> Produtos com incentivos fiscais específicos</li>
+      <li><strong>Cálculo:</strong> Em duas etapas (base reduzida, depois ICMS)</li>
+    </ul>
+    
+    <h4>Fórmulas de Cálculo:</h4>
+    <div style="background: #007bff; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0;">
+      <strong>1º) Base Reduzida = Base de Cálculo × (1 - Redução ICMS ÷ 100)</strong>
+    </div>
+    <div style="background: #28a745; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0;">
+      <strong>2º) Valor do ICMS = Base Reduzida × (Alíquota ICMS ÷ 100)</strong>
+    </div>
+    
+    <h5>Exemplo prático:</h5>
+    <p>• Base de Cálculo: R$ 1.000,00</p>
+    <p>• Redução ICMS: 30%</p>
+    <p>• Base Reduzida: R$ 1.000,00 × (1 - 30 ÷ 100) = <strong>R$ 700,00</strong></p>
+    <p>• Alíquota ICMS: 18%</p>
+    <p>• Valor do ICMS: R$ 700,00 × (18 ÷ 100) = <strong>R$ 126,00</strong></p>
+  </div>
 
-<div id="cst_20">
-  <h3>CST ICMS 20</h3>
-  <p>
-    O CST 20 E utilizado para realizar calculos de ICMS quando existe redução de
-    base de calculo.
-  </p>
-</div>
-<div id="cst00">
-  <label for="" id="baseCalculo">Base de Calculo</label>
-  <input type="number" id="base_calculo_icms" value="0.00" />
-  <label for="">Redução ICMS</label>
-  <input type="number" id="reducao" value="0.00" />
-  <label for="">Base Reduzida</label>
-  <p id="valor_base_reduzida">0,00</p>
-  <label for="">Aliquota ICMS</label>
-  <input type="number" id="aliquota_icms" value="0.00" />
-  <label for="">Valor do ICMS</label>
-  <p id="valor_icms">0,00</p>
-</div>
+  <div id="cst00">
+    <label for="" id="baseCalculo">Base de Calculo</label>
+    <input type="number" id="base_calculo_icms" value="0.00" />
+    <label for="">Redução ICMS</label>
+    <input type="number" id="reducao" value="0.00" />
+    <label for="">Base Reduzida</label>
+    <p id="valor_base_reduzida">0,00</p>
+    <label for="">Aliquota ICMS</label>
+    <input type="number" id="aliquota_icms" value="0.00" />
+    <label for="">Valor do ICMS</label>
+    <p id="valor_icms">0,00</p>
+  </div>
 
-<button id="calcular">Calcular</button>
+  <button id="calcular">Calcular</button>
+
+  <h4>Observações importantes:</h4>
+  <ul>
+    <li>A redução da base de cálculo é um benefício fiscal concedido por lei</li>
+    <li>O percentual de redução varia conforme o produto e legislação estadual</li>
+    <li>Comum em produtos da cesta básica, medicamentos e outros itens essenciais</li>
+    <li>Deve ser aplicada antes do cálculo do ICMS efetivo</li>
+  </ul>
+</section>

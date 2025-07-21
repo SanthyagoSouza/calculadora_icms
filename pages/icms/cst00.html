@@ -1,32 +1,33 @@
 <style>
-  #cst_00 {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
 
-  #cst00 {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
 </style>
 <section id="cst-00">
-
-
   <div id="cst_00">
     <h3>CST ICMS 00</h3>
     <p>
       O CST 00 é utilizado para operações internas com alíquota de ICMS normal, ou
       seja, sem isenção ou redução de base de cálculo.
     </p>
+    
+    <h4>Características principais:</h4>
+    <ul>
+      <li><strong>Tributação integral:</strong> Sem benefícios fiscais</li>
+      <li><strong>Base de cálculo:</strong> Valor total da operação</li>
+      <li><strong>Alíquota:</strong> Varia conforme estado e produto (geralmente 7% a 18%)</li>
+      <li><strong>Aplicação:</strong> Operações internas (dentro do mesmo estado)</li>
+    </ul>
+    
+    <h4>Fórmula de Cálculo:</h4>
+    <div style="background: #007bff; color: white; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0;">
+      <strong>Valor do ICMS = Base de Cálculo × (Alíquota ICMS ÷ 100)</strong>
+    </div>
+    
+    <h5>Exemplo prático:</h5>
+    <p>• Base de Cálculo: R$ 1.000,00</p>
+    <p>• Alíquota ICMS: 18%</p>
+    <p>• Cálculo: R$ 1.000,00 × (18 ÷ 100) = <strong>R$ 180,00</strong></p>
   </div>
+
   <div id="cst00">
     <label for="" id="baseCalculo">Base de Calculo</label>
     <input type="number" id="base_calculo_icms" value="0.00" />
@@ -37,3 +38,11 @@
   </div>
 
   <button id="calcular">Calcular</button>
+
+  <h4>Observações importantes:</h4>
+  <ul>
+    <li>Este cálculo aplica-se apenas a operações internas (mesmo estado)</li>
+    <li>A alíquota varia conforme a legislação estadual e o tipo de produto</li>
+    <li>Para operações interestaduais, utilize outros CSTs apropriados</li>
+  </ul>
+</section>
