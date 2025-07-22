@@ -33,19 +33,19 @@
   padding: 12px;
   margin: 33px 8px 0;
   background-color: var(--color-bg);
-  text-align: left;
+  /* text-align: left; */
   border-radius: 12px;
   box-shadow: 3px 7px 15px var(--color-box-shadow);
 }
 
-#cst_00 {
+/* #cst_00 {
   margin: 10px;
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background-color: #f9f9f9;
-  text-align: left;
-}
+  text-align: center;
+} */
 
 #cst_00 h3 {
   text-align: center;
@@ -176,19 +176,19 @@
 }
 
 /* Mantendo estilos originais para outros elementos */
-#cst-20 {
+/* #cst-20 {
   padding: 12px;
   margin: 33px 8px 0;
   background-color: var(--color-bg);
   text-align: center;
-}
+} */
 
-#valor_sub_icms,
+/* #valor_sub_icms,
 #valor_base_icms_sub,
 #valor_base_reduzida,
 #valor_diferimento_icms,
 #valor_icms_recolher {
-  width: 42%;
+  width: 10%;
   padding: 1px;
   margin: 2px 1px;
   border-radius: 8px;
@@ -198,9 +198,9 @@
   color: var(--color-text-primary);
   background-color: var(--color-highlight-bg);
   box-shadow: 1px 3px 3px var(--color-box-shadow);
-}
+} */
 
-#calcular-cst-00 {
+/* #calcular-cst-00 {
   margin-top: 12px;
   width: 15%;
   padding: 1px;
@@ -208,9 +208,9 @@
   border: 1px solid var(--color-border);
   box-shadow: 1px 1px 5px var(--color-box-shadow);
   cursor: pointer;
-}
+} */
 
-#cst_icms {
+#cst_icms, #cst_ipi {
   width: 33%;
   padding: 1px;
   margin-bottom: 18px;
@@ -276,7 +276,7 @@
   background-color: var(--color-bg);
   box-shadow: 3px 7px 15px var(--color-box-shadow);
 }
-
+/* 
 #cst-20 {
   padding: 12px;
   margin: 33px 8px 0;
@@ -284,7 +284,7 @@
   text-align: left; /* Mudou de center para left */
   border-radius: 12px;
   box-shadow: 3px 7px 15px var(--color-box-shadow);
-}
+} */
 
 /* Adicionar estilo para #cst_20 similar ao #cst_00: */
 #cst_20 {
@@ -384,24 +384,24 @@
 /* MUDANÇAS ESPECÍFICAS PARA CST 10 */
 
 /* Adicionar novo estilo para #cst-10: */
-#cst-10 {
+/* #cst-10 {
   padding: 12px;
   margin: 33px 8px 0;
   background-color: var(--color-bg);
   text-align: left;
   border-radius: 12px;
   box-shadow: 3px 7px 15px var(--color-box-shadow);
-}
+} */
 
 /* Substituir o estilo original #cst_10 por este: */
-#cst_10 {
+/* #cst_10 {
   margin: 10px;
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background-color: #f9f9f9;
   text-align: left; /* Mudou de center para left */
-}
+} */
 
 #cst_10 h3 {
   text-align: center;
